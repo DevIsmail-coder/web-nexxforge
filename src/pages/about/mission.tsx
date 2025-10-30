@@ -1,5 +1,5 @@
 // import React from 'react'
-import type { About } from "../../types/about"
+// import type { About } from "../../types/about"
 
 
 
