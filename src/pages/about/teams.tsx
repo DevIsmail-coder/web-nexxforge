@@ -66,7 +66,9 @@ const teamsData = [
 
 const Teams = () => {
     return (
-          <div className="w-full flex items-center gap-5 flex-col pt-8 pb-8">
+          <div 
+           style={{ fontFamily: "'Montserrat', sans-serif" }}
+          className="w-full flex items-center gap-5 flex-col pt-8 pb-8">
       <h3 className="text-[22px] font-bold">Meet The Team</h3>
       <main className="w-[80%] flex flex-wrap items-center justify-between gap-2 ">
         {
@@ -75,8 +77,8 @@ const Teams = () => {
                     <div className="w-full h-60 object-cover rounded-[50%]">
                         <img src={i.img} className="w-full h-full object-contain"/>
                     </div>
-                    <h3 className="text-[17px] font-[450] text-center">{i.name}</h3>
-                    <p className="text-[15px] font-extralight text-center">{i.role}</p>
+                    <h3 className="text-[17px] font-semibold text-center">{i.name}</h3>
+                    <p className="text-[15px] font-light text-center">{i.role}</p>
                 </article>
             ))
         }

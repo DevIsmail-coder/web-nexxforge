@@ -11,10 +11,12 @@ const Aboutpics = [
 
 const Mission = () => {
   return (
-    <div className='w-[80%] flex items-center flex-col justify-center gap-8'>
+    <div 
+     style={{ fontFamily: "'Montserrat', sans-serif" }}
+    className='w-[80%] flex items-center flex-col justify-center gap-8'>
       <div className="flex items-center flex-col justify-center gap-2">
         <h1 className="text-[33px] font-extrabold bg-linear-to-r bg-clip-text text-transparent from-[#051E6D] to-[#052EB1]">About Us</h1>
-        <p className="w-[90%] tex-[20px] font-normal text-center">Empowering the Future, Building, Nurturing, and Deploying World-Class tech talents</p>
+        <p className="md:w-[90%] tex-[20px] font-normal text-center">Empowering the Future, Building, Nurturing, and Deploying World-Class tech talents</p>
       </div>
       <div className="w-full items-center flex justify-between md:h-68 object-contain">
         {
@@ -31,7 +33,6 @@ const Mission = () => {
           <h3 className="text-[20px] font-bold">Our Mission to Mentor and Train Young Minds in web development</h3>
           <p className="text-[15px] md:text-[23px] font-extralight font-montserrat">
             Our mission is bold and clear: to train 7,000 aspiring tech talents across Africa over the next 5 years — empowering them with in-demand digital skills in areas like Product Design, Web Development, and Software Engineering. Through this mission, we aim to raise confident, job-ready professionals who are prepared to thrive in today’s digital economy.
-            
           </p>
           <p className="text-[15px] md:text-[23px] font-extralight font-montserrat">
              At NexxForge, our approach is centered around real-world experience, expert guidance, and a supportive learning environment. We don’t just teach theory — we build doers. From day one, students are immersed in a learning journey that challenges them to solve problems, collaborate effectively, and design impactful solutions
