@@ -45,9 +45,9 @@ const Header = () => {
             <h2 onClick={() => handleNavigate("/about-us")} className={isActive("/about-us")}>About</h2>
             <h2 onClick={() => handleNavigate("/contact-us")} className={isActive("/contact-us")}>Contact</h2>
           </article>
-          <button className="w-[20%] border - 1 border-[#223A8B] hover:border-0 p-4 text-[#031F7B] text-[20px] cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] font-light outline-none rounded-sm"
-            onClick={() => window.location.href = "https://hubspot-k95r.onrender.com/api/v1/authenticate"}
-          >Join the Waitlist</button>
+          <a href='https://forms.gle/zHY7Rt6UapsHcf7F9' 
+           className="w-[20%] border - 1 border-[#223A8B] hover:border-0 p-4 text-[#031F7B] text-[20px] cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] font-light outline-none rounded-sm"
+          >Join the Waitlist</a>
         </main>
         <main className="w-full flex justify-center md:hidden bg-[#FFFFFF] pb-3"
          ref={menuRef}
@@ -68,10 +68,12 @@ const Header = () => {
                 <p onClick={() => handleNavigate("/")} className={isActive("/")}>Home</p>
                 <p onClick={() => handleNavigate("/about-us")} className={isActive("/about-us")}>About</p>
                 <p onClick={() => handleNavigate("/contact-us")} className={isActive("/contact-us")}>Contact</p>
-                <button className="w-32 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF]  bg-[#223A8B] px-2 py-3.5 text-[#FFFFFF] text-[10px] font-light outline-none rounded-sm"
+                <a 
+                href='https://forms.gle/zHY7Rt6UapsHcf7F9'
+                className="w-32 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF]  bg-[#223A8B] px-2 py-3.5 text-[#FFFFFF] text-[10px] font-light outline-none rounded-sm"
                   onClick={() => window.location.href = "https://hubspot-k95r.onrender.com/api/v1/authenticate"}
 
-                >Join the Waitlist</button>
+                >Join the Waitlist</a>
               </div>
             }
           </div>
