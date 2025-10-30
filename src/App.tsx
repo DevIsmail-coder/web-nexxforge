@@ -8,6 +8,7 @@ import ResetPassword from './Auth/reset-password'
 import OutletPage from './global'
 import AboutUs from './pages/about'
 import Contact from './pages/contact'
+import Footer from './components/ui/footer'
 
 
 function App() {
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/contact-us",
           element: <Contact />
+        },
+        {
+          path: "/footer",
+          element: <Footer />
         },
       ]
     }
