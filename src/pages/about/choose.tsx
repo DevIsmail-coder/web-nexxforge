@@ -29,7 +29,9 @@ const chooseData = [
 ]
 const Choose = () => {
   return (
-    <div className="w-full bg-[#F3F3FC] flex items-center gap-5 flex-col pt-8 pb-8">
+    <div 
+     style={{ fontFamily: "'Montserrat', sans-serif" }}
+    className="w-full bg-[#F3F3FC] flex items-center gap-5 flex-col pt-8 pb-8">
       <h3 className="text-[22px] font-bold">Why choose Nexxforge</h3>
       <main className="w-[80%] flex flex-wrap items-center justify-between gap-2 ">
         {
