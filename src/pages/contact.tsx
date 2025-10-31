@@ -49,11 +49,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
-      {/* Contact Form */}
-      <section className="w-full max-w-3xl p-6 mt-10">
-        <div className="w-full h-30 bg-gray flex justify-center items-center flex-col mb-10">
-          <h1 className="text-blue-800 text-4xl font-extrabold">Contact us</h1>
+    <div
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
+      className="flex flex-col items-center gap-10">
+      <section className="w-full flex flex-col items-center justify-center gap-10">
+        <div className="w-[80%] md:w-[60%] flex justify-center items-center flex-col">
+          <h1 className="text-[33px] font-extrabold bg-linear-to-r bg-clip-text text-transparent from-[#051E6D] to-[#052EB1]">Contact us</h1>
           <p className="text-center">
             For partnership opportunities, sponsorship inquiries, or any further
             questions, please reach out to us using the contact details provided
@@ -61,62 +62,76 @@ const Contact: React.FC = () => {
             can collaborate to make a positive impact together.
           </p>
         </div>
-        <h2 className="text-2xl font-bold text-center mb-2">Get in touch</h2>
-        <p className="text-center text-gray-500 mb-6">
-          Reach out to us via message
-        </p>
 
-        <form className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Your name"
-              className="flex-1   bg-gray-300  p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              placeholder="Phone number"
-              className="flex-1   bg-gray-300  p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+
+        <form className="w-[90%] md:w-[75%] flex flex-col items-center justify-center gap-5">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-2xl font-bold text-center mb-2">Get in touch</h2>
+            <p className="text-center text-gray-500 mb-6">
+              Reach out to us via message
+            </p>
           </div>
-
+          <div className="w-full flex flex-col md:flex-row gap-5">
+            <article className="w-full md:w-[50%] flex flex-col gap-2">
+              <h3>Name</h3>
+              <input
+                type="text"
+                placeholder="Your name"
+                className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
+              />
+            </article>
+            <article className="w-full md:w-[50%] flex flex-col gap-2">
+              <h3>Phone Number</h3>
+              <input
+                type="text"
+                placeholder="Phone number"
+                className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
+              />
+            </article>
+          </div>
+          <article className="flex flex-col gap-2 w-full">
+            <h3>Email</h3>
+            <input
+              type="email"
+              placeholder="Email"
+              className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
+            />
+          </article>
           <textarea
             placeholder="Input your message"
-            className="w-full   bg-gray-300 p-3 h-62 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-70 bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
           ></textarea>
 
           <button
             type="submit"
-            className="w-full bg-blue-600  cursor-pointertext-white py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+            className="w-full bg-[#3E6BFF]  text-[#FFFFFF] cursor-pointertext-white py-3 rounded-md font-semibold hover:bg-linear-to-r  from-[#051E6D] to-[#052EB1]"
           >
             Send now
           </button>
         </form>
       </section>
 
-      {/* FAQ Section */}
-      <section className="w-full max-w-4xl mt-12 mb-16">
+      <section className="w-[90%] md:w-[80%] flex flex-col items-center justify-center pb-8">
         <h3 className="text-center text-xl font-semibold mb-8">
           Frequently Asked Questions
         </h3>
 
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="w-full md:w-[48%] pt-3">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between cursor-pointer items-center bg-blue-950 text-white px-4 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors"
+                className="w-full flex justify-between cursor-pointer items-center bg-[#06248B] text-white px-4 py-3 rounded-t-md font-medium hover:bg-[#3F6BFF] transition-colors"
               >
                 <span>{faq.question}</span>
                 <FaChevronDown
-                  className={`transform transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180" : ""
-                  }`}
+                  className={`transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               {activeIndex === index && (
-                <div className="bg-gray-100 border border-t-0 border-gray-300 text-gray-700 px-4 py-3 rounded-b-md text-sm">
+                <div className="bg-[#021962] border border-t-0 border-gray-300 text-[#FFFFFF] px-4 py-3 rounded-b-md text-sm">
                   {faq.answer}
                 </div>
               )}

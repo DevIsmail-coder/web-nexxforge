@@ -46,7 +46,7 @@ const Header = () => {
             <h2 onClick={() => handleNavigate("/contact-us")} className={isActive("/contact-us")}>Contact</h2>
           </article>
           <a href='https://forms.gle/zHY7Rt6UapsHcf7F9' 
-           className="w-[20%] border - 1 border-[#223A8B] hover:border-0 p-4 text-[#031F7B] text-[20px] cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] font-light outline-none rounded-sm"
+           className="w-[20%] border flex items-center justify-center  border-[#223A8B] hover:border-0 p-3 text-[#031F7B] text-[20px] cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] font-light outline-none rounded-sm"
           >Join the Waitlist</a>
         </main>
         <main className="w-full flex justify-center md:hidden bg-[#FFFFFF] pb-3"
@@ -70,7 +70,8 @@ const Header = () => {
                 <p onClick={() => handleNavigate("/contact-us")} className={isActive("/contact-us")}>Contact</p>
                 <a 
                 href='https://forms.gle/zHY7Rt6UapsHcf7F9'
-                className="w-32 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF]  bg-[#223A8B] px-2 py-3.5 text-[#FFFFFF] text-[10px] font-light outline-none rounded-sm"
+                className="w-32 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] flex items-center justify-center bg-[#223A8B] px-2 py-3.5 text-[#FFFFFF] text-[10px] font-light outline-none rounded-sm"
+
                   onClick={() => window.location.href = "https://hubspot-k95r.onrender.com/api/v1/authenticate"}
 
                 >Join the Waitlist</a>
