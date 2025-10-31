@@ -71,6 +71,7 @@ const Header = () => {
                 <a 
                 href='https://forms.gle/zHY7Rt6UapsHcf7F9'
                 className="w-32 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] flex items-center justify-center bg-[#223A8B] px-2 py-3.5 text-[#FFFFFF] text-[10px] font-light outline-none rounded-sm"
+
                   onClick={() => window.location.href = "https://hubspot-k95r.onrender.com/api/v1/authenticate"}
 
                 >Join the Waitlist</a>

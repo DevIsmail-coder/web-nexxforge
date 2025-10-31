@@ -17,6 +17,8 @@ const Mission = () => {
       <div className="flex items-center flex-col justify-center gap-2">
         <h1 className="text-[33px] font-extrabold bg-linear-to-r bg-clip-text text-transparent from-[#051E6D] to-[#052EB1]">About Us</h1>
         <p className="md:w-[90%] font-normal text-center">Empowering the Future, Building, Nurturing, and Deploying World-Class tech talents</p>
+
+       
       </div>
       <div className="w-full items-center flex justify-between md:h-68 object-contain">
         {
