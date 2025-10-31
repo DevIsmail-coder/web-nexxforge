@@ -3,62 +3,74 @@
 
 const teamsData = [
     {
-        name: "Joshua Saleh",
+        firstName: "Joshua",
+        lastName: "Saleh",
         role: "CEO /Founder",
         img: "/Ellipse 15.png",
     },
     {
-        name: "Sophia James",
+        firstName: "Sophia James",
+        lastName: "",
         role: "CO-Founder/ COO",
         img: "/Ellipse 15 (1).png",
     },
     {
-        name: "Godwill Nwachukwu",
+        firstName: "Godwill",
+        lastName: "Nwachukwu",
         role: "Chief marketing Officer",
         img: "/Ellipse 15 (2).png",
     },
     {
-        name: "Maryjane Nwachikwu",
+        firstName: "Maryjane",
+        lastName: "Nwachikwu",
         role: "Chief Technical Operator",
         img: "/Ellipse 15 (3).png",
     },
     {
-        name: "Prince Jehosaphat",
+        firstName: "Prince",
+        lastName: "Jehosaphat",
         role: "S.R Product Designer",
         img: "/Ellipse 15 (4).png",
     },
     {
-        name: "Ismail Olawale",
+        firstName: "Ismail",
+        lastName: "Olawale",
         role: "Frontend Developer",
         img: "/Ellipse 15 (6).png",
     },
     {
-        name: "Osuji wisdom",
+        firstName: "Osuji",
+        lastName: "wisdom",
         role: "Frontend Developer",
         img: "/Ellipse 15 (5).png",
     },
     {
-        name: "Ahmed Aremu",
+        firstName: "Ahmed",
+        lastName: "Aremu",
         role: "Frontend Developer",
         img: "/Ellipse 15 (7).png",
     },
     {
-        name: "Emmanuel John",
+        firstName: "Emmanuel",
+        lastName: "John",
         role: "Backend Engineer",
         img: "/Ellipse 15 (9).png",
     },
     {
-        name: "Adebusola Ajibola",
+        firstName: "Adebusola",
+        lastName: "Ajibola",
         role: "Graphic Designer",
         img: "/Ellipse 15 (10).png",
     },
     {
-        name: "Samuel wilson",
+        firstName: "Samuel ",
+        lastName: "wilson",
         role: "Graphic Designer",
         img: "/Ellipse 15 (11).png",
     },
     {
-        name: "Tobi Samuel",
+        firstName: "Tobi",
+        lastName: "Samuel",
         role: "Video Editor",
         img: "/Ellipse 15 (12).png",
     },
@@ -73,11 +85,12 @@ const Teams = () => {
       <main className="w-[80%] flex flex-wrap items-center justify-between gap-2 ">
         {
             teamsData.map((i, index) => ( 
-                <article key={index} className="w-[47%] md:w-[24%]  flex flex-col md:pt-15 md:gap-2 items-center">
-                    <div className="w-full h-60 object-cover rounded-[50%]">
+                <article key={index} className="w-[47%] md:w-[24%] gap-2 pt-5 flex flex-col md:pt-15 md:gap-2 items-center">
+                    <div className="w-full md:h-60 object-cover bg-green-400 rounded-[50%]">
                         <img src={i.img} className="w-full h-full object-contain"/>
                     </div>
-                    <h3 className="text-[17px] font-semibold text-center">{i.name}</h3>
+                    <h3 className="text-[17px] hidden md:flex font-semibold text-center">{i.firstName} {i.lastName}</h3>
+                    <h3 className="text-[17px] md:hidden font-semibold text-center">{i.firstName}</h3>
                     <p className="text-[15px] font-light text-center">{i.role}</p>
                 </article>
             ))
