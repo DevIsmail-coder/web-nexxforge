@@ -9,8 +9,8 @@ const teamsData = [
         img: "/Ellipse 15.png",
     },
     {
-        firstName: "Sophia James",
-        lastName: "",
+        firstName: "Sophia",
+        lastName: "James",
         role: "CO-Founder/ COO",
         img: "/Ellipse 15 (1).png",
     },
@@ -86,7 +86,7 @@ const Teams = () => {
         {
             teamsData.map((i, index) => ( 
                 <article key={index} className="w-[47%] md:w-[24%] gap-2 pt-5 flex flex-col md:pt-15 md:gap-2 items-center">
-                    <div className="w-full md:h-60 object-cover bg-green-400 rounded-[50%]">
+                    <div className="w-full md:h-60 object-cover rounded-[50%]">
                         <img src={i.img} className="w-full h-full object-contain"/>
                     </div>
                     <h3 className="text-[17px] hidden md:flex font-semibold text-center">{i.firstName} {i.lastName}</h3>

@@ -10,18 +10,18 @@ const Footer = () => {
       <div className="w-45 bg-white flex items-center justify-center rounded-[3px] object-cover">
         <img src="/WhatsApp_Image_2025-09-10_at_14.38.28-removebg-preview 1.png" alt="logo" className="h-15 w-full object-contain"  />
       </div>
-      <div className="max-w-5xl mt-15 mx-auto flex flex-col items-end md:flex-row justify-between gap-8">
-        <div className="w-full  md:-w-[30%] text-[20px] font-[450]">
+      <div className="w-full mt-15 flex flex-col items-end md:flex-row justify-between gap-10">
+        <div className="w-full text-[20px] font-[450]">
           <p className="mt-2">Get in touch</p>
           <a
-            href="mailto:Nexxforge@gmail.com"
+            href="https://forms.gle/dXxhCgjkcy91MBwQ9"
             className="text-gray-200 hover:text-white"
           >
             Nexxforge@gmail.com
           </a>
         </div>
 
-        <div className="w-full md:w-[30] text-[20px] font-[450]">
+        <div className="w-full text-[20px] font-[450]">
           <h4> Our Socials</h4>
 
             <div className="flex items-center space-x-4">
@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="w-full md:w-[30%]  flex flex-col space-y-2 text-[20px] font-[450]">
+        <div className="w-full md:w-[30%] flex flex-col space-y-2 text-[20px] font-[450]">
           <a href="#home" className="hover:text-gray-300">
             Home
           </a>

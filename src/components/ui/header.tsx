@@ -55,7 +55,7 @@ const Header = () => {
           <div className='w-[90%]'>
             <div className='w-full flex items-center justify-between pb-5 pt-3'>
               <img src="/WhatsApp_Image_2025-09-10_at_14.38.28-removebg-preview 1.png" className="w-25" />
-              <div onClick={() => setIsOpen(!isOpen)} className='flex items-center justify-center cursor-pointer p-1.5 bg-[#031F7B]'>
+              <div onClick={() => setIsOpen(!isOpen)} className='flex items-center justify-center cursor-pointer p-1.5 bg-[#031F7B] rounded-[3px]'>
                 <Menu className='text-white size-4' />
               </div>
             </div>
