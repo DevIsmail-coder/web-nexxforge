@@ -6,7 +6,7 @@
 const Aboutpics = [
   "/Frame 1984078403 (1).png",
   "/Frame 1984078414.png",
-  "public/Frame 1984078405 (6).png",
+  "/Frame 1984078405 (6).png",
 ]
 
 const Mission = () => {
