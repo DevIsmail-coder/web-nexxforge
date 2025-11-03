@@ -21,7 +21,6 @@ const registrationData = [
         about: "Open the Door to Opportunities: Secure a Paid Internship Placement Upon Successful Completion of Our Intensive Six-Month Training Program. Your Hard Work and Dedication Will Be Rewarded with a Valuable Real-World Experience and a Stepping Stone towards Your Future Success.",
     },
 
-
 ]
 
 const Registration = () => {
