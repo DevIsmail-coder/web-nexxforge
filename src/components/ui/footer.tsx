@@ -1,5 +1,6 @@
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -25,20 +26,17 @@ const Footer = () => {
           <h4> Our Socials</h4>
 
             <div className="flex items-center space-x-4">
-              <a href="#" className="text-gray-700 hover:text-purple-700">
-                <i className="fa-brands fa-facebook-f">
+                 <a href="https://www.linkedin.com/company/nexxforge/" className="text-gray-700 hover:text-purple-700">
+                  <FaLinkedin color="white" size={25} />
+              </a>
+              <a href="https://www.facebook.com/share/17Wyc1BWaY/?mibextid=wwXIfr" className="text-gray-700 hover:text-purple-700">
                   <FaFacebook color="white" size={25} />
-                </i>
               </a>
-              <a href="#" className="text-gray-700 hover:text-purple-700">
-                <i className="fa-brands fa-youTube">
+              <a href="https://www.youtube.com/channel/UCgOU1yQcn0hNzNtvAau5IQQ" className="text-gray-700 hover:text-purple-700">
                   <FaYoutube color="white" size={25} />
-                </i>
               </a>
-              <a href="#" className="text-gray-700 hover:text-purple-700">
-                <i className="fa-brands fa-instagram">
+              <a href="https://www.instagram.com/nexx_forge" className="text-gray-700 hover:text-purple-700">
                   <RiInstagramFill color="white" size={25}  />
-                </i>
               </a>
 
               <p>@Nexxforge</p>

@@ -22,7 +22,7 @@ const teamsData = [
     },
     {
         firstName: "Maryjane",
-        lastName: "Nwachikwu",
+        lastName: "Uzochukwu",
         role: "Chief Technical Operator",
         img: "/Ellipse 15 (3).png",
     },
@@ -70,7 +70,7 @@ const teamsData = [
     },
     {
         firstName: "Tobi",
-        lastName: "Samuel",
+        lastName: "Akinwade",
         role: "Video Editor",
         img: "/Ellipse 15 (12).png",
     },
