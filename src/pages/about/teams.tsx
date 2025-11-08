@@ -15,7 +15,7 @@ const teamsData = [
         img: "/Ellipse 15 (1).png",
     },
     {
-        firstName: "Godwill",
+        firstName: "God'swill",
         lastName: "Nwachukwu",
         role: "Chief marketing Officer",
         img: "/Ellipse 15 (2).png",
