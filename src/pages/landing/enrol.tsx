@@ -1,12 +1,12 @@
 // import React from 'react'
 
 
-    const Homepics = [
-        "/Frame 1984078376 (1).png",
-        "/Frame 1984078377.png",
-        "/Frame 1984078379.png",
-        "/Frame 1984078378.png"
-    ]
+const Homepics = [
+    "/Frame 1984078376 (1).png",
+    "/Frame 1984078377.png",
+    "/Frame 1984078379.png",
+    "/Frame 1984078378.png"
+]
 
 const Enrol = () => {
 
@@ -21,9 +21,9 @@ const Enrol = () => {
                 </h1>
                 <p className="md:w-[70%] font-light md:font-normal text-center">Join a growing community of innovators learning, building, and leading through practical tech education.</p>
                 {/* <div className="pb-10"> */}
-                    <a 
-                href="https://forms.gle/dXxhCgjkcy91MBwQ9"
-                className="w-35 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] flex items-center justify-center bg-[#031F7B] px-2 py-3 text-[#FFFFFF] text-[14px] font-normal outline-none rounded-sm">
+                <a
+                    href="https://forms.gle/dXxhCgjkcy91MBwQ9"
+                    className="w-35 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] flex items-center justify-center bg-[#031F7B] px-2 py-3 text-[#FFFFFF] text-[14px] font-normal outline-none rounded-sm">
                     Enrol now
                 </a>
             </div>
@@ -33,7 +33,7 @@ const Enrol = () => {
                         <img
                             key={index}
                             src={pics}
-                            className={`"w-[18%] md:w-[24%] h-full object-cover rounded-[10px] overflow-hidden duration-500 ${index === 1 ||index === 2 ? "mb-25" : "mb-0"}`}
+                            className={`"w-[18%] md:w-[24%] h-full object-cover rounded-[10px] overflow-hidden duration-500 ${index === 1 || index === 2 ? "mb-25" : "mb-0"}`}
                         />
                     ))}
             </div>

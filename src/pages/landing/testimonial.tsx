@@ -3,16 +3,16 @@
 
 const testimonialData = [
     {
-        img: "/Ellipse 11.png",
-        name: "Nanpon  Ndam",
+        img: "/Ellipse 12.png",
+        name: "Joseph Sodje",
         role: "Product Design Trainee",
-        testimony: "NexxForge isn’t just a training platform; it’s a family that pushes you to be better. The guidance I received went beyond tech — it built my confidence and leadership skills",
+        testimony: "Joining NexxForge was one of the best decisions I’ve made. With their hands-on training and real-world projects, I went from complete beginner to confidently launching my first product.",
     },
     {
-        img: "/Ellipse 11 (3).png",
-        name: "Sarah Daniel",
+        img: "/Ellipse 12 (1).png",
+        name: "Joan Samuel",
         role: "Product Design Trainee",
-        testimony: "Joining Nexxforge was one of the best decisions I’ve made. The mentorship, hands-on projects, and community helped me grow from a beginner to a confident product designer ready to take on real-world challenges.",
+        testimony: "What sets NexxForge apart is the real emphasis on solving real problems. It’s not just about learning code—it’s about building applications that matter. The experience transformed my mindset and my skillset.”",
     },
     {
         img: "/Ellipse 11.png",

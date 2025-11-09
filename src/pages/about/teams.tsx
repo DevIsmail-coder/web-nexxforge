@@ -15,14 +15,14 @@ const teamsData = [
         img: "/Ellipse 15 (1).png",
     },
     {
-        firstName: "Godwill",
+        firstName: "God'swill",
         lastName: "Nwachukwu",
         role: "Chief marketing Officer",
         img: "/Ellipse 15 (2).png",
     },
     {
         firstName: "Maryjane",
-        lastName: "Nwachikwu",
+        lastName: "Uzochukwu",
         role: "Chief Technical Operator",
         img: "/Ellipse 15 (3).png",
     },
@@ -70,7 +70,7 @@ const teamsData = [
     },
     {
         firstName: "Tobi",
-        lastName: "Samuel",
+        lastName: "Akinwade",
         role: "Video Editor",
         img: "/Ellipse 15 (12).png",
     },
