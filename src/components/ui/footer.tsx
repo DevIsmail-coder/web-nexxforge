@@ -37,6 +37,7 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/nexx_forge" className="text-gray-700 hover:text-purple-700">
                   <RiInstagramFill color="white" size={25}  />
+
               </a>
 
               <p>@Nexxforge</p>
