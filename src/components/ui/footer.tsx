@@ -1,8 +1,13 @@
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+
+ const navigate = useNavigate() 
+
+
   return (
     <footer 
     style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -37,23 +42,21 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/nexx_forge" className="text-gray-700 hover:text-purple-700">
                   <RiInstagramFill color="white" size={25}  />
-
               </a>
 
               <p>@Nexxforge</p>
             </div>
         </div>
-
-        <div className="w-full md:w-[30%] flex flex-col space-y-2 text-[20px] font-[450]">
-          <a href="#home" className="hover:text-gray-300">
+        <div className="w-full md:w-[30%] flex flex-col space-y-2 text-[20px] font-[450] cursor-pointer">
+          <p onClick={() => navigate("/")} className="hover:text-gray-300">
             Home
-          </a>
-          <a href="#about" className="hover:text-gray-300">
+          </p>
+          <p onClick={() => navigate("/about-us")} className="hover:text-gray-300">
             About
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
+          </p>
+          <p onClick={() => navigate("/contact-us")} className="hover:text-gray-300">
             Contact
-          </a>
+          </p>
         </div>
       </div>
       </main>
