@@ -18,8 +18,8 @@ const journeyData = [
 const Journey = () => {
     return (
         <div className="w-full h-auto flex flex-col items-center pt-10 pb-10 gap-5">
-            <h3 className="w-[80%] md:w-[40%] text-[22px] text-center md:text-[40px] font-[650]">Moments That Define Our Journey</h3>
-            <p className="md:w-[50%] w-[80%] text-[14px] md:text-[23px] font-light text-center">Every picture tells a story of growth, collaboration, and the passion that drives NexxForge</p>
+            <h3 className="w-[80%] md:w-[40%] text-[22px] text-center md:text-[23px] font-[650]">Moments That Define Our Journey</h3>
+            <p className="md:w-[50%] w-[80%] text-[14px] md:text-[16px] md:font-normal text-center">Every picture tells a story of growth, collaboration, and the passion that drives NexxForge</p>
             <div className="w-full flex items-center justify-center pt-15 pb-15 bg-[#F3F3FC]">
                 <main className="w-[80%] flex flex-wrap items-center justify-between gap-3">
                     {
