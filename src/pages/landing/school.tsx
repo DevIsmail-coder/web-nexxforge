@@ -10,7 +10,7 @@ const School = () => {
     return (
         <div className="w-full h-auto flex flex-col items-center pt-10 pb-10 gap-5">
             <h3 className="text-[23px] font-[650]">Our Schools</h3>
-             <p className="md:w-[35%] w-[90%] text-[10px] md:text-[16px] md:font-normal text-center">We ensure that Africans interested in exploring various occupations can readily access the resources they need to learn and grow</p>
+             <p className="md:w-[35%] w-[90%] text-[10px] md:text-[16px] md:font-normal text-center">We ensure that Africans interested in exploring various occupations can readily access the resourcesthey need to learn and grow</p>
             <main className="w-[80%] flex flex-wrap items-center justify-between gap-5 md:gap-0">
                 {
                     schoolData.map((pics, index) => (

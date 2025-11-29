@@ -31,8 +31,8 @@ const testimonialData = [
 const Testimonial = () => {
     return (
         <div className="w-[90%] md:w-[80%] flex flex-col items-center">
-            <h3 className="w-full text-[22px] text-center md:text-[40px] font-[650]">Testimonials</h3>
-            <p className="md:w-[65%] w-full text-[14px] md:text-[23px] font-light text-center">Our community speaks — see how NexxForge is changing lives, one skill at a time.</p>
+            <h3 className="w-full text-[22px] text-center md:text-[23px] font-[650]">Testimonials</h3>
+            <p className="md:w-[65%] w-full text-[14px] md:text-[16px] md:font-normal text-center">Our community speaks — see how NexxForge is changing lives, one skill at a time.</p>
        
         <div className="w-full flex flex-col md:flex-row items-center gap-7 md:gap-5 md:overflow-x-auto md:scroll-smooth md:scrollbar-hide px-4 pt-7 pb-7">
             {
