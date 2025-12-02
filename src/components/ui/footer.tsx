@@ -47,7 +47,6 @@ const Footer = () => {
               <p>@Nexxforge</p>
             </div>
         </div>
-
         <div className="w-full md:w-[30%] flex flex-col space-y-2 text-[20px] font-[450] cursor-pointer">
           <p onClick={() => navigate("/")} className="hover:text-gray-300">
             Home
