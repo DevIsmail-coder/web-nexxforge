@@ -33,6 +33,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
                  <a href="https://www.linkedin.com/company/nexxforge/" className="text-gray-700 hover:text-purple-700">
                   <FaLinkedin color="white" size={25} />
+
               </a>
               <a href="https://www.facebook.com/share/17Wyc1BWaY/?mibextid=wwXIfr" className="text-gray-700 hover:text-purple-700">
                   <FaFacebook color="white" size={25} />
@@ -47,7 +48,6 @@ const Footer = () => {
               <p>@Nexxforge</p>
             </div>
         </div>
-
         <div className="w-full md:w-[30%] flex flex-col space-y-2 text-[20px] font-[450] cursor-pointer">
           <p onClick={() => navigate("/")} className="hover:text-gray-300">
             Home
