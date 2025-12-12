@@ -57,6 +57,15 @@ const Contact: React.FC = () => {
     user_message: "",
   });
 
+
+  const clearError = (field: string) => {
+  setErrors(prev => ({
+    ...prev,
+    [field]: "",
+  }));
+};
+
+
   const validate = () => {
     const tempErrors = {
       user_name: "",
@@ -133,13 +142,6 @@ const Contact: React.FC = () => {
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  const clearError = (field: string) => {
-  setErrors(prev => ({
-    ...prev,
-    [field]: "",
-  }));
-};
 
 
 
