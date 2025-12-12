@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
@@ -48,6 +47,7 @@ const Contact: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
 
 
   const [errors, setErrors] = useState({
@@ -264,5 +264,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
 
