@@ -44,7 +44,7 @@ const faqs: FAQ[] = [
   },
 ];
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -125,7 +125,6 @@ const Contact: React.FC = () => {
           icon: "📩",
         });
 
-        // 🔥 Smooth animation
         form.current?.classList.add("animate-pulse");
         setTimeout(() => {
           form.current?.classList.remove("animate-pulse");
