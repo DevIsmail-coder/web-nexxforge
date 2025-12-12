@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 interface FAQ {
   question: string;
@@ -42,7 +44,42 @@ const faqs: FAQ[] = [
 ];
 
 const Contact: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+
+const form = useRef<HTMLFormElement >(null);
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!form.current) return;
+
+  setLoading(true);
+
+  emailjs
+    .sendForm(
+      "service_qm6clfa",
+      "template_0yyzdzb",
+      form.current,
+      "o3Uz6Le-tdvpnfeop"
+    )
+    .then(
+      (result) => {
+        console.log("SUCCESS:", result.text);
+        alert("Message sent successfully!");
+
+        form.current.reset(); 
+      },
+      (error) => {
+        console.error("FAILED:", error.text);
+        alert("Failed to send message. Check console for details.");
+      }
+    )
+    .finally(() => {
+      setLoading(false); // 🔥 STOP LOADING
+    });
+};
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -64,7 +101,8 @@ const Contact: React.FC = () => {
         </div>
 
 
-        <form className="w-[90%] md:w-[75%] flex flex-col items-center justify-center gap-5">
+        <form ref={form} onSubmit={sendEmail}
+        className="w-[90%] md:w-[75%] flex flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-2xl font-bold text-center mb-2">Get in touch</h2>
             <p className="text-center text-gray-500 mb-6">
@@ -77,6 +115,7 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Your name"
+                name="user_name"
                 className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
               />
             </article>
@@ -85,6 +124,7 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Phone number"
+                name="user_phoneNumber"
                 className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
               />
             </article>
@@ -94,19 +134,22 @@ const Contact: React.FC = () => {
             <input
               type="email"
               placeholder="Email"
+              name="user_email"
               className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
             />
           </article>
           <textarea
             placeholder="Input your message"
+            name="user_message"
             className="w-full h-70 bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
           ></textarea>
 
           <button
             type="submit"
+            value="Send"
             className="w-full bg-[#3E6BFF]  text-[#FFFFFF] cursor-pointertext-white py-3 rounded-md font-semibold hover:bg-linear-to-r  from-[#051E6D] to-[#052EB1]"
           >
-            Send now
+           {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </section>
@@ -144,3 +187,10 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
+
+
+
+
+
+
