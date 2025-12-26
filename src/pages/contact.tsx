@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
@@ -48,8 +47,10 @@ const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
 
 
+ 
   const [errors, setErrors] = useState({
     user_name: "",
     user_email: "",
@@ -141,7 +142,6 @@ const Contact = () => {
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
 
 
   return (
@@ -265,5 +265,4 @@ const Contact = () => {
 };
 
 export default Contact;
-
 
