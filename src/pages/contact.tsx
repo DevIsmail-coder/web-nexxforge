@@ -48,6 +48,8 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   
+
+
  
   const [errors, setErrors] = useState({
     user_name: "",
@@ -124,87 +126,6 @@ const Contact = () => {
           icon: "📩",
         });
 
-        form.current?.classList.add("animate-pulse");
-        setTimeout(() => {
-          form.current?.classList.remove("animate-pulse");
-        }, 600);
-
-        form.current?.reset();
-      })
-      .catch(() => {
-        toast.error("Failed to send message ❌");
-      })
-      .finally(() => setLoading(false));
-  };
-
-
-  const [errors, setErrors] = useState({
-    user_name: "",
-    user_email: "",
-    user_phoneNumber: "",
-    user_message: "",
-  });
-
-  const validate = () => {
-    const tempErrors = {
-      user_name: "",
-      user_email: "",
-      user_phoneNumber: "",
-      user_message: "",
-    };
-
-    let valid = true;
-
-    if (!form.current?.user_name.value) {
-      tempErrors.user_name = "Name is required";
-      valid = false;
-    }
-
-    if (!form.current?.user_email.value) {
-      tempErrors.user_email = "Email is required";
-      valid = false;
-    }
-
-    if (!form.current?.user_phoneNumber.value) {
-      tempErrors.user_phoneNumber = "Phone number is required";
-      valid = false;
-    }
-
-    if (!form.current?.user_message.value) {
-      tempErrors.user_message = "Message cannot be empty";
-      valid = false;
-    }
-
-    setErrors(tempErrors);
-    return valid;
-  };
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!validate()) {
-      toast.error("Please fix the errors before sending ❗");
-      return;
-    }
-
-    if (!form.current) return;
-
-    setLoading(true);
-
-    emailjs
-      .sendForm(
-        "service_qm6clfa",
-        "template_0yyzdzb",
-        form.current,
-        "o3Uz6Le-tdvpnfeop"
-      )
-      .then(() => {
-        toast.success("Message sent successfully! 🎉", {
-          duration: 2000,
-          icon: "📩",
-        });
-
-        // 🔥 Smooth animation
         form.current?.classList.add("animate-pulse");
         setTimeout(() => {
           form.current?.classList.remove("animate-pulse");
