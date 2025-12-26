@@ -43,19 +43,29 @@ const faqs: FAQ[] = [
   },
 ];
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   
 
 
+ 
   const [errors, setErrors] = useState({
     user_name: "",
     user_email: "",
     user_phoneNumber: "",
     user_message: "",
   });
+
+
+  const clearError = (field: string) => {
+  setErrors(prev => ({
+    ...prev,
+    [field]: "",
+  }));
+};
+
 
   const validate = () => {
     const tempErrors = {
@@ -116,7 +126,6 @@ const Contact: React.FC = () => {
           icon: "📩",
         });
 
-        // 🔥 Smooth animation
         form.current?.classList.add("animate-pulse");
         setTimeout(() => {
           form.current?.classList.remove("animate-pulse");
@@ -133,14 +142,6 @@ const Contact: React.FC = () => {
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  const clearError = (field: string) => {
-  setErrors(prev => ({
-    ...prev,
-    [field]: "",
-  }));
-};
-
 
 
   return (

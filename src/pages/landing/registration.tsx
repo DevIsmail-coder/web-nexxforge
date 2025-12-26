@@ -24,6 +24,7 @@ const registrationData = [
 ]
 
 
+
 const Registration = () => {
 
     return (
