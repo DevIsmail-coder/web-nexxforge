@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { toast } from 'sonner';
 
 interface FAQ {
   question: string;
@@ -41,12 +43,106 @@ const faqs: FAQ[] = [
   },
 ];
 
-const Contact: React.FC = () => {
+const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
+
+
+ 
+  const [errors, setErrors] = useState({
+    user_name: "",
+    user_email: "",
+    user_phoneNumber: "",
+    user_message: "",
+  });
+
+
+  const clearError = (field: string) => {
+  setErrors(prev => ({
+    ...prev,
+    [field]: "",
+  }));
+};
+
+
+  const validate = () => {
+    const tempErrors = {
+      user_name: "",
+      user_email: "",
+      user_phoneNumber: "",
+      user_message: "",
+    };
+
+    let valid = true;
+
+    if (!form.current?.user_name.value) {
+      tempErrors.user_name = "Name is required";
+      valid = false;
+    }
+
+    if (!form.current?.user_email.value) {
+      tempErrors.user_email = "Email is required";
+      valid = false;
+    }
+
+    if (!form.current?.user_phoneNumber.value) {
+      tempErrors.user_phoneNumber = "Phone number is required";
+      valid = false;
+    }
+
+    if (!form.current?.user_message.value) {
+      tempErrors.user_message = "Message cannot be empty";
+      valid = false;
+    }
+
+    setErrors(tempErrors);
+    return valid;
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validate()) {
+      toast.error("Please fix the errors before sending ❗");
+      return;
+    }
+
+    if (!form.current) return;
+
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_qm6clfa",
+        "template_0yyzdzb",
+        form.current,
+        "o3Uz6Le-tdvpnfeop"
+      )
+      .then(() => {
+        toast.success("Message sent successfully! 🎉", {
+          duration: 2000,
+          icon: "📩",
+        });
+
+        form.current?.classList.add("animate-pulse");
+        setTimeout(() => {
+          form.current?.classList.remove("animate-pulse");
+        }, 600);
+
+        form.current?.reset();
+      })
+      .catch(() => {
+        toast.error("Failed to send message ❌");
+      })
+      .finally(() => setLoading(false));
+  };
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
 
   return (
     <div
@@ -64,7 +160,8 @@ const Contact: React.FC = () => {
         </div>
 
 
-        <form className="w-[90%] md:w-[75%] flex flex-col items-center justify-center gap-5">
+        <form ref={form} onSubmit={sendEmail}
+          className="w-[90%] md:w-[75%] flex flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-2xl font-bold text-center mb-2">Get in touch</h2>
             <p className="text-center text-gray-500 mb-6">
@@ -77,16 +174,28 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Your name"
+                name="user_name"
+                  onChange={() => clearError("user_name")}
                 className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
               />
+              {errors.user_name && (
+                <span className="text-red-500 text-sm">{errors.user_name}</span>
+              )}
             </article>
             <article className="w-full md:w-[50%] flex flex-col gap-2">
               <h3>Phone Number</h3>
               <input
                 type="text"
                 placeholder="Phone number"
+                name="user_phoneNumber"
+                 onChange={() => clearError("user_phoneNumber")}
                 className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
               />
+              {errors.user_phoneNumber && (
+                <span className="text-red-500 text-sm">
+                  {errors.user_phoneNumber}
+                </span>
+              )}
             </article>
           </div>
           <article className="flex flex-col gap-2 w-full">
@@ -94,19 +203,31 @@ const Contact: React.FC = () => {
             <input
               type="email"
               placeholder="Email"
+              name="user_email"
+               onChange={() => clearError("user_email")}
               className="bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
             />
+            {errors.user_email && (
+              <span className="text-red-500 text-sm">{errors.user_email}</span>
+            )}
           </article>
-          <textarea
-            placeholder="Input your message"
-            className="w-full h-70 bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
-          ></textarea>
-
+          <article className="flex flex-col gap-2 w-full">
+            <textarea
+              placeholder="Input your message"
+              name="user_message"
+              onChange={() => clearError("user_message")}
+              className="w-full h-70 bg-[#F3F3FC]  p-3 outline-none rounded-md focus:bg-[#DADAFF]"
+            ></textarea>
+            {errors.user_message && (
+              <span className="text-red-500 text-sm">{errors.user_message}</span>
+            )}
+          </article>
           <button
             type="submit"
-            className="w-full bg-[#3E6BFF]  text-[#FFFFFF] cursor-pointertext-white py-3 rounded-md font-semibold hover:bg-linear-to-r  from-[#051E6D] to-[#052EB1]"
+            value="Send"
+            className="w-full bg-[#3E6BFF]  text-[#FFFFFF] cursor-pointertext-white py-3 rounded-md font-semibold hover:bg-linear-to-r cursor-pointer  from-[#051E6D] to-[#052EB1]"
           >
-            Send now
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </section>
@@ -144,3 +265,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+

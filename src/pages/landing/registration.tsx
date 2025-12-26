@@ -23,11 +23,27 @@ const registrationData = [
 
 ]
 
+
+
 const Registration = () => {
+
     return (
         <>
-            <div className="w-full bg-[#D6E0FF] flex items-center justify-center p-2 text-[8px] text-center md:text-[19px] md:font-normal">
-                Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1
+            <style>
+                {`
+      @keyframes slide {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-slide {
+        display: inline-block;
+        animation: slide 20s linear infinite; 
+      }
+    `}
+            </style>
+
+            <div className="w-full  bg-[#D6E0FF] flex items-center justify-center p-2 text-[8px] text-center md:text-[19px] md:font-normal">
+                <p className="whitespace-nowrap animate-slide">Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1</p>
             </div>
             <div
                 className="w-full bg-[#F3F3FC] flex items-center gap-5 flex-col pt-8 pb-8">
@@ -40,9 +56,9 @@ const Registration = () => {
                                     <img src={i.img} className="w-[80%]" />
                                 </div>
                                 <h3 className="text[10px] md:text-[17px] font-semibold pt-3">{i.title}</h3>
-                                <p 
-                                style={{backgroundColor: `${i.colors}`}}
-                                className="w-[30%] h-2"></p>
+                                <p
+                                    style={{ backgroundColor: `${i.colors}` }}
+                                    className="w-[30%] h-2"></p>
                                 <p className="text[10px] md:text-[15px] font-light">{i.about}</p>
                             </article>
                         ))
