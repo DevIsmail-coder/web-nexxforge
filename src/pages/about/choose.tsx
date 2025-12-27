@@ -1,4 +1,4 @@
-// import React from 'react'
+import images from "../../assets/Alt images 1.png"
 
 
 const chooseData = [
@@ -37,7 +37,7 @@ const Choose = () => {
         {
             chooseData.map((i, index) => ( 
                 <article key={index} className="w-full h-auto md:w-[49%] md:h-65 bg-[#FFFFFF] justify-center shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] rounded-[9px] p-5 flex flex-col gap-3 hover:border-t hover:border-t-[#031F7B]">
-                    <img src="/Alt images 1.png" className="w-10 md:w-12" loading='eager'/>
+                    <img src={images} className="w-10 md:w-12" loading='eager'/>
                     <h3 className="text[10px] md:text-[19px] font-[550]">{i.title}</h3>
                     <p className="text[10px] md:text-[21px] font-extralight">{i.about}</p>
                 </article>
