@@ -39,7 +39,7 @@ const Header = () => {
       <div className="flex w-full items-center justify-center fixed top-0 left-0 right-0 z-50">
         <main className="hidden w-[80%] items-center justify-between md:flex  py-6 bg-[#FFFFFF]/70">
           <article className="w-[15%]">
-            <img src={image} />
+            <img src={image} loading='eager' />
           </article>
           <article className="w-[32%] flex items-center text-[18px] justify-between text-[#242424] cursor-pointer">
             <h2 onClick={() => handleNavigate("/")} className={isActive("/")}>Home</h2>
@@ -55,7 +55,7 @@ const Header = () => {
         >
           <div className='w-[90%]'>
             <div className='w-full flex items-center justify-between pb-5 pt-3'>
-              <img src={image} className="w-25" />
+              <img src={image} className="w-25" loading='eager' />
               <div onClick={() => setIsOpen(!isOpen)} className='flex items-center justify-center cursor-pointer p-1.5 bg-[#031F7B] rounded-[3px]'>
                 <Menu className='text-white size-4' />
               </div>

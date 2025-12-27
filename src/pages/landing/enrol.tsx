@@ -32,6 +32,7 @@ const Enrol = () => {
                         <img
                             key={index}
                             src={pics}
+                            loading='eager'
                             className={`"w-[18%] md:w-[24%] h-full object-cover rounded-[10px] overflow-hidden duration-500 ${index === 1 || index === 2 ? "mb-25" : "mb-0"}`}
                         />
                     ))}
