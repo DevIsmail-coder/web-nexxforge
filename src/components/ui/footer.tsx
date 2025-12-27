@@ -2,6 +2,7 @@ import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import image from "../../assets/logo.png"
 
 const Footer = () => {
 
@@ -14,7 +15,7 @@ const Footer = () => {
     className="w-full flex items-baseline md:items-center flex-col bg-black text-white py-10 px-4">
        <main className="w-[80%]">
       <div className="w-45 bg-white flex items-center justify-center rounded-[3px] object-cover">
-        <img src="/WhatsApp_Image_2025-09-10_at_14.38.28-removebg-preview 1.png" alt="logo loading='eager' " className="h-15 w-full object-contain"  />
+        <img src={image} alt="logo loading='eager' " className="h-15 w-full object-contain"  />
       </div>
       <div className="w-full mt-15 flex flex-col items-end md:flex-row justify-between gap-10">
         <div className="w-full text-[20px] font-[450]">
