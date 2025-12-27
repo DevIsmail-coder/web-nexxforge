@@ -45,7 +45,7 @@ const Mission = () => {
           </p>
         </article>
         <article className="hidden md:flex md:h-145 object-cover">
-          <img src="/Frame 1984078404.png loading='eager'"  className="w-full h-full object-contain"/>
+          <img src="/Frame 1984078404.png" loading='eager'  className="w-full h-full object-contain"/>
         </article>
       </div>
     </div>
