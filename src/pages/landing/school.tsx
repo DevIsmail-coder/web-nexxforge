@@ -15,7 +15,7 @@ const School = () => {
                 {
                     schoolData.map((pics, index) => (
                         <article key={index} className="w-full md:w-[31%] h-65 rounded-[20px] object-contain">
-                        <img src={pics} alt="" className="w-full h-full object-cover rounded-[9px]"/>
+                        <img src={pics} alt="" className="w-full h-full object-cover rounded-[9px] loading='eager'"/>
                         </article>
                     ))
                 }

@@ -24,26 +24,36 @@ const registrationData = [
 ]
 
 
+
 const Registration = () => {
 
     return (
         <>
             <style>
                 {`
-      @keyframes slide {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      .animate-slide {
-        display: inline-block;
-        animation: slide 20s linear infinite; 
-      }
-    `}
+@keyframes slide {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 20s linear infinite;
+}
+`}
             </style>
 
-            <div className="w-full  bg-[#D6E0FF] flex items-center justify-center p-2 text-[8px] text-center md:text-[19px] md:font-normal">
-                <p className="whitespace-nowrap animate-slide">Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1</p>
+            <div className="w-full overflow-hidden bg-[#D6E0FF] flex items-center p-2 text-[8px] md:text-[19px]">
+                <p className="animate-slide">
+                    Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1 🚀
+                </p>
             </div>
+
             <div
                 className="w-full bg-[#F3F3FC] flex items-center gap-5 flex-col pt-8 pb-8">
                 <h3 className="text-[22px] font-bold">What's in for you?</h3>
@@ -52,7 +62,7 @@ const Registration = () => {
                         registrationData.map((i, index) => (
                             <article key={index} className="w-full h-auto md:w-[29%] md:h-100 bg-[#FFFFFF] items-baseline shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] rounded-[9px] p-5 pt-7 flex flex-col gap-3 hover:border-t-2 hover:border-t-[#031F7B]">
                                 <div className="w-13 h-13 flex items-center justify-center p-3 rounded-[50%] bg-[#C5E4FF]" >
-                                    <img src={i.img} className="w-[80%]" />
+                                    <img src={i.img} className="w-[80%] loading='eager'" />
                                 </div>
                                 <h3 className="text[10px] md:text-[17px] font-semibold pt-3">{i.title}</h3>
                                 <p
