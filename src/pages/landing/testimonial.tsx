@@ -41,7 +41,7 @@ const Testimonial = () => {
                     style={{ boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.24)" }}
                     className="w-full md:w-[55%] md:h-95 flex flex-col justify-center gap-3 rounded-[9px] px-5 py-3 md:shrink-0"> 
                     <article className="flex gap-3">
-                        <img src={i.img}  alt=""  className="w-15 h-15 md:w-22 md:h-22" />
+                        <img src={i.img}  alt=""  className="w-15 h-15 md:w-22 md:h-22 loading='eager'" />
                         <span>
                             <h2 className="text-[15px] md:text-[20px] font-bold text-[#270B4D]">{i.name}</h2>
                             <p className="text-[10px] md:text-[15px] font-normal md:font-[450]">{i.role}</p>

@@ -25,7 +25,7 @@ const Journey = () => {
                     {
                         journeyData.map((i, index) => (
                             <article key={index} className="w-full md:w-[31%] h-70 rounded-[20px] object-contain pt-5">
-                                <img src={i} alt="" className="w-full h-full object-cover rounded-[9px]" />
+                                <img src={i} alt="" className="w-full h-full object-cover rounded-[9px] loading='eager'" />
                             </article>
                         ))
                     }

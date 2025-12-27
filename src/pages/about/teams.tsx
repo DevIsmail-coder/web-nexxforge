@@ -87,7 +87,7 @@ const Teams = () => {
             teamsData.map((i, index) => ( 
                 <article key={index} className="w-[47%] md:w-[24%] gap-2 pt-5 flex flex-col md:pt-15 md:gap-2 items-center">
                     <div className="w-full md:h-60 object-cover rounded-[50%]">
-                        <img src={i.img} className="w-full h-full object-contain"/>
+                        <img src={i.img} className="w-full h-full object-contain loading='eager'"/>
                     </div>
                     <h3 className="text-[17px] hidden md:flex font-semibold text-center">{i.firstName} {i.lastName}</h3>
                     <h3 className="text-[17px] md:hidden font-semibold text-center">{i.firstName}</h3>
