@@ -31,20 +31,29 @@ const Registration = () => {
         <>
             <style>
                 {`
-      @keyframes slide {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      .animate-slide {
-        display: inline-block;
-        animation: slide 20s linear infinite; 
-      }
-    `}
+@keyframes slide {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 20s linear infinite;
+}
+`}
             </style>
 
-            <div className="w-full  bg-[#D6E0FF] flex items-center justify-center p-2 text-[8px] text-center md:text-[19px] md:font-normal">
-                <p className="whitespace-nowrap animate-slide">Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1</p>
+            <div className="w-full overflow-hidden bg-[#D6E0FF] flex items-center p-2 text-[8px] md:text-[19px]">
+                <p className="animate-slide">
+                    Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1 🚀
+                </p>
             </div>
+
             <div
                 className="w-full bg-[#F3F3FC] flex items-center gap-5 flex-col pt-8 pb-8">
                 <h3 className="text-[22px] font-bold">What's in for you?</h3>
