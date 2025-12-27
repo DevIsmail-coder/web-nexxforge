@@ -23,7 +23,7 @@ const Enrol = () => {
                 <a
                     href="https://forms.gle/dXxhCgjkcy91MBwQ9"
                     className="w-35 cursor-pointer hover:bg-[#181717] hover:text-[#FFFFFF] flex items-center justify-center bg-[#031F7B] px-2 py-3 text-[#FFFFFF] text-[14px] font-normal outline-none rounded-sm">
-                    Enrol now
+                    Enroll now
                 </a>
             </div>
             <div className="items-center flex justify-between h-30 md:h-58 gap-2 md:gap-5 object-contain">
