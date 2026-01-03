@@ -50,7 +50,7 @@ const Registration = () => {
 
             <div className="w-full overflow-hidden bg-[#D6E0FF] flex items-center p-2 text-[8px] md:text-[19px]">
                 <p className="animate-slide">
-                    Registration for Nexxforge Academy cohort 1.0 will soon start! Join the wait list for Cohort 1 🚀
+                    We’re excited to announce that registration for our First Cohort Training is now open! Take the bold step to kickstart or advance your tech career with NexxForge. 🚀
                 </p>
             </div>
 
